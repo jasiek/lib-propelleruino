@@ -12,9 +12,14 @@
 class Serial_
 {
 public:
-	void begin(uint16_t baud_count);
-	void end(void);
+  int available(void);
+  void begin(uint16_t baud_count);
+  void end(void);
+  void flush(void);
+  void print(const char * str);
+  void println(long num);
   void println(const char * str);
+  int read(void);
 };
 extern Serial_ Serial;
 #endif
